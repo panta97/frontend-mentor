@@ -1,0 +1,230 @@
+:root {
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: var(--pale-blue);
+    background-color: var(--very-dark-blue);
+}
+
+/* TYPOGRAPHY */
+
+.text-bold {
+    font-weight: 700;
+}
+
+.usage-left {
+    text-transform: uppercase;
+}
+
+.usage-number {
+    font-size: 2.2rem;
+    color: var(--very-dark-blue);
+}
+
+.usage-title {
+    color: var(--grayish-blue);
+}
+
+.usage-min-max {
+    font-size: .8rem;
+}
+
+/* LAYOUT */
+
+body {
+    background-color: var(--very-dark-blue);
+    background-image: url("/images/bg-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    min-width: 330px;
+}
+
+.options,
+.storage {
+    border-radius: 10px;
+    background-color: var(--dark-blue);
+    padding: 40px;
+}
+
+.options {
+    border-top-right-radius: 100px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    margin-bottom: 35px;
+}
+
+.btn-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+}
+
+.btn {
+    background-color: var(--very-dark-blue);
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.storage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.title,
+.usage {
+    margin-bottom: 15px;
+}
+
+.usage {
+    width: 100%;
+}
+
+.usage-bar,
+.usage-bar-inner {
+    height: 15px;
+    border-radius: 40px;
+}
+
+.usage-bar {
+    box-sizing: content-box;
+    border: 2px solid var(--very-dark-blue);
+    background-color: var(--very-dark-blue);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.usage-bar-inner {
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2px;
+}
+
+.usage-bar-circle {
+    display: inline-block;
+    background-color: white;
+    border-radius: 50%;
+    height: 10.8px;
+    width: 10.8px;
+}
+
+.usage-min-max {
+    display: flex;
+    justify-content: space-between;
+}
+
+.usage-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    width: 50%;
+    padding: 15px 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 125px;
+}
+
+@media (min-width: 940px) {
+
+    /* LAYOUT */
+
+    body {
+        background-image: url("/images/bg-desktop.png");
+        background-repeat: no-repeat;
+        background-size: 100% 50%;
+        /* background-size: contain; */
+        background-position: bottom;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        width: auto;
+    }
+
+    .options {
+        width: 330px;
+        min-width: 330px;
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+
+    .storage {
+        width: 500px;
+        min-width: 550px;
+    }
+
+    .title {
+        align-self: flex-start;
+    }
+
+    .usage {
+        margin-bottom: 0;
+    }
+
+    .usage-left {
+        width: 35%;
+        top: -45px;
+        right: 40px;
+        border-bottom-right-radius: 0;
+    }
+
+    .usage-left::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 25px solid white;
+        border-left: 25px solid transparent;
+        margin-bottom: -23px;
+    }
+
+}
