@@ -50,7 +50,7 @@ body {
 
 body {
     background-color: var(--very-dark-blue);
-    background-image: url("/images/bg-mobile.png");
+    background-image: url("https://panta97.github.io/frontend-mentor/fylo-data-storage-component/images/bg-mobile.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -174,7 +174,7 @@ body {
     /* LAYOUT */
 
     body {
-        background-image: url("/images/bg-desktop.png");
+        background-image: url("https://panta97.github.io/frontend-mentor/fylo-data-storage-component/images/bg-desktop.png");
         background-repeat: no-repeat;
         background-size: 100% 50%;
         /* background-size: contain; */
